@@ -95,7 +95,7 @@ app.post("/signup", async (req, res) => {
             [email, hash, is_admin])
 
 
-        return res.status(201).send({ massage: "user kiritildi!" })
+        return res.status(201).send({ massage: "user created!" })
     } catch (error) {
         return res.status(400).send({ massage: "ERROR singup" })
     }
@@ -142,5 +142,5 @@ app.listen({ port: process.env.API_PORT }, (err, address) => {
         console.error(err)
         process.exit(1)
     }
-    console.log(`Server ishchi: ${address}`)
+    console.log(`Server working on port: ${address}`)
 })
