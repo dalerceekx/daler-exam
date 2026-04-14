@@ -25,7 +25,7 @@ app.get("/users", async (req, res) => {
         
         if (!user_id) {
             return res.status(400).send({
-                massage: "user_id kiriting!"
+                massage: "user_id write!"
             })
         }
 
@@ -74,7 +74,7 @@ app.post("/signup", async (req, res) => {
 
         if (!email || !password) {
             return res.status(400).send({
-                massage: "Hato kiritilgan! "
+                massage: "error entered! "
             })
         }
 
@@ -107,7 +107,7 @@ app.post("/login", async (req, res) => {
 
         if (!email || !password) {
             return res.status(400).send({
-                massage: "Hato kiritildi! "
+                massage: "writed error! "
             })
         }
         const datauser = await pool.query(`
