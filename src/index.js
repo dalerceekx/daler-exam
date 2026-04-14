@@ -84,7 +84,7 @@ app.post("/signup", async (req, res) => {
 
         if (checkemail.rows.length > 0) {
             return res.status(400).send({
-                massage: "Bunday email mavjud! "
+                massage: "This email is already in use! "
             })
         }
 
